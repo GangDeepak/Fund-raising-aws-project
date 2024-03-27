@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alumni Fund Raising</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Alumni Fund Raising</h1>
+        
+        <form id="fundraising-form">
+            <p>
+                Your Contribution big or small is crucial to our fundraising.
+                Sponsring the entire event earns prominent recoginition on posters as 
+                <b>Golden Sponsor</b> 🥇 if you Contribute more than <b>₹5000</b> and <b>Silver Sponsor</b> 🥈 if you contribute more than 
+                <b>₹2500</b> showcasing your philanthropy. You can also sponsor the entire event or contribute in general.
+            </p>
+            <label for="fname"><h3>First Name</h3></label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname"><h3>Last Name</h3></label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="course"> <h3>Provide the course you have studied in NITT</h3></label>
+            <input type="text" id="course" name="course" required>
+
+            <label for="batch"><h3>Batch Year</h3></label>
+            <input type="text" id="batch" name="batch" required>
+
+            <label for="job"><h3>Job Profile</h3></label>
+            <input type="text" id="job" name="job" required>
+
+            <label for="company"><h3>Company</h3></label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="email"><h3>Email</h3></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone"><h3>WhatsApp number</h3></label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <label for="golden"><h3>Would You Like to be the Golden Sponsor? (Yes/No)</h3></label>
+            <input type="text" id="golden" name="golden" required>
+
+            <label for="silver"><h3>Would You Like to be the Silver Sponsor? (Yes/ No)</h3></label>
+            <input type="text" id="silver" name="silver" required>
+
+            <label for="amount"><h3>Amount of Contribution</h3></label>
+            <input type="number" id="amount" name="amount" required>
+
+            <button type="submit"><h3>Submit</h3></button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
