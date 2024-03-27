@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <h1 style="text-align: center;">Alumni Fund Raising</h1>
-        
+        <fieldset>
         <form id="fundraising-form">
             <p>
                 Your Contribution big or small is crucial to our fundraising.
@@ -34,10 +34,10 @@
             <input type="text" id="company" name="company" required>
 
             <label for="email"><h3>Email</h3></label>
-            <input type="text" id="email" name="email" required>
+            <input type="email" id="email" name="email" required>
 
             <label for="phone"><h3>WhatsApp number</h3></label>
-            <input type="text" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
 
             <label for="golden"><h3>Would You Like to be the Golden Sponsor? (Yes/No)</h3></label>
             <input type="text" id="golden" name="golden" required>
@@ -48,8 +48,9 @@
             <label for="amount"><h3>Amount of Contribution</h3></label>
             <input type="text" id="amount" name="amount" required>
 
-            <button type="submit"><h3>Submit</h3></button>
+            <input type="submit" value="Submit" onclick="submitForm()">
         </form>
+    </fieldset>
     </div>
     <script src="script.js"></script>
 </body>
