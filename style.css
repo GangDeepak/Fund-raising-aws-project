@@ -1,7 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
 }
 
 form {
@@ -10,19 +22,9 @@ form {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-p{
-    font-size: 120%;
-}
-
-fieldset {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
 
 label {
-    display: block;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -32,26 +34,22 @@ input[type="tel"],
 input[type="number"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Ensure padding and border included in element's total width and height */
+    box-sizing: border-box;
 }
 
-button[type="submit"] {
+input[type="submit"] {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-button[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #0056b3;
-}
-
-.error-message {
-    color: red;
-    font-size: 14px;
 }
