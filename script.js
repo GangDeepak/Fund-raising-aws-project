@@ -58,3 +58,32 @@ function submitForm() {
         amount : amount
     }));
 }
+document.getElementById('fundraising-form').addEventListener('submit', function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+  
+    // Reset the form
+    this.reset();
+  });
+  
+function onPageLoad() {
+    console.log("Page loaded!");
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://x15nn8ogwj.execute-api.ap-south-1.amazonaws.com/prod/fetch', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({}));
+
+    // Set up response handler
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                document.getElementById('tableContainer').innerHTML = renderResponse(xhr.response);
+            } else {
+                alert('Enter Valid Inputs: ' + xhr.responseText);
+            }
+        }
+    };
+}
+
+// Register onPageLoad function to be called when the page loads
+window.onload = onPageLoad;
