@@ -69,7 +69,7 @@ document.getElementById('fundraising-form').addEventListener('submit', function(
 function onPageLoad() {
     console.log("Page loaded!");
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://x15nn8ogwj.execute-api.ap-south-1.amazonaws.com/prod/fetch', true);
+    xhr.open('GET', 'https://dr34z341ee.execute-api.ap-south-1.amazonaws.com/deep', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({}));
 
