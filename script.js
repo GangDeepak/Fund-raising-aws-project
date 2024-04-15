@@ -58,6 +58,26 @@ function submitForm() {
         amount : amount
     }));
 }
+function renderResponse(data) {
+    data = JSON.parse(data);
+    data = data.data;
+
+    let html = '<table border="1">';
+    html += '<tr>';
+    for (let key in data[0]) {
+        html += '<th>' + key + '</th>';
+    }
+    html += '</tr>';
+    data.forEach(function(item) {
+        html += '<tr>';
+        for (let key in item) {
+            html += '<td>' + item[key] + '</td>';
+        }
+        html += '</tr>';
+    });
+    html += '</table>';
+    return html;
+}
 document.getElementById('fundraising-form').addEventListener('submit', function(event) {
     // Prevent the default form submission behavior
     event.preventDefault();
